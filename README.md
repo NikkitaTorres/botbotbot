@@ -2,13 +2,13 @@
 by [Nikkita Torres](nikkitatorres@yahoo.com).
 
 ### Description
-This is a project created as a test for a future capstone project. Currently, the project is able to open a chromium browser, and navigates to "nike.com", the "Men's", and "Jordan" categories specifically. The project should be able to inspect elements and return the title of the product card in the terminal.
+This is a project created as a test for a future capstone project. Currently, the project is able to open a chromium browser, and navigates to "amazon.com". The project should be able to inspect elements and return the title, price, and image URL of the product card in the terminal.
 
 ### Setup/Installation Requirements
 
 1. Clone this project [here](https://github.com/NikkitaTorres/botbotbot.git)
 2. Run the command "npm install" to download dependencies for the project. *Be warned* Puppeteer installs and runs on Chromium, an open-source browser project.
-3. In the terminal, run the command "node .\index.js" to launch the program and have it open the url entered in the index.js file ([nike.com/](https://www.nike.com/w/mens-jordan-shoes-37eefznik1zy7ok)). Program will automatically collect the titles of all shoes listed in the category and return them in the terminal.
+3. In the terminal, run the command "node .\index.js" to launch the program and have it open the url entered in the index.js file ([amazon.com])(https://www.amazon.com/s?rh=n%3A15391321011&fs=true&ref=lp_15391321011_sar). Program will automatically collect the titles, price and image URL's of all items listed in the electronics and return them in the terminal.
 
 ### Built With
 
@@ -17,8 +17,7 @@ This is a project created as a test for a future capstone project. Currently, th
 
 ### Known Issues/Bugs
 
-Not currently pulling any information into the terminal when it's supposed to be providing data for shoe title in product card.
-
+Not currently pulling any information into the terminal.
 ### License
 
 MIT License
