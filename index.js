@@ -1,5 +1,4 @@
-const { default: puppeteer } = require('puppeteer');
-const puppeterr = require('puppeteer');
+const puppeteer = require("puppeteer");
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -41,7 +40,7 @@ const puppeterr = require('puppeteer');
         producthandle
       );
     } catch (error) {}
-    
+
     console.log(title, price, img)
   }
   //await browser.close();
