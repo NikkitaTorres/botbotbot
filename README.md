@@ -2,9 +2,13 @@
 by [Nikkita Torres](nikkitatorres@yahoo.com).
 
 ### Description
-This is a project created as a test for a future capstone project. Currently, the project is able to open a headless browser (no UI), and takes a screenshot of the website it is directed to navigate to, currently "example.com".
+This is a project created as a test for a future capstone project. Currently, the project is able to open a chromium browser, and navigates to "nike.com", the "Men's", and "Jordan" categories specifically. The project should be able to inspect elements and return the title of the product card in the terminal.
 
 ### Setup/Installation Requirements
+
+1. Clone this project [here](https://github.com/NikkitaTorres/botbotbot.git)
+2. Run the command "npm install" to download dependencies for the project. *Be warned* Puppeteer installs and runs on Chromium, an open-source browser project.
+3.  
 
 ### Built With
 
@@ -13,7 +17,7 @@ This is a project created as a test for a future capstone project. Currently, th
 
 ### Known Issues/Bugs
 
-No known bugs at this time.
+Not currently pulling any information into the terminal when it's supposed to be providing data for shoe title in product card.
 
 ### License
 
