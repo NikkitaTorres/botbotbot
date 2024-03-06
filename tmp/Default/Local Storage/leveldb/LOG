@@ -1,6 +1,5 @@
-2024/03/06-11:36:10.310 2830 Reusing MANIFEST C:\Users\nikki\Desktop\Epicodus stuff\botbotbot\tmp\Default\Local Storage\leveldb/MANIFEST-000001
-2024/03/06-11:36:10.312 2830 Recovering log #32
-2024/03/06-11:36:10.318 2830 Reusing old log C:\Users\nikki\Desktop\Epicodus stuff\botbotbot\tmp\Default\Local Storage\leveldb/000032.log 
-2024/03/06-11:37:21.731 2830 Level-0 table #36: started
-2024/03/06-11:37:21.736 2830 Level-0 table #36: 19006 bytes OK
-2024/03/06-11:37:21.737 2830 Delete type=0 #32
+2024/03/06-12:22:55.127 34c4 Reusing MANIFEST C:\Users\nikki\Desktop\Epicodus stuff\botbotbot\tmp\Default\Local Storage\leveldb/MANIFEST-000001
+2024/03/06-12:22:55.131 34c4 Recovering log #44
+2024/03/06-12:22:55.135 34c4 Reusing old log C:\Users\nikki\Desktop\Epicodus stuff\botbotbot\tmp\Default\Local Storage\leveldb/000044.log 
+2024/03/06-12:24:11.408 40e0 Level-0 table #48: started
+2024/03/06-12:24:11.414 40e0 Level-0 table #48: 22854 bytes OK

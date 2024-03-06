@@ -8,7 +8,7 @@ This is a project created as a test for a future capstone project. Currently, th
 
 1. Clone this project [here](https://github.com/NikkitaTorres/botbotbot.git)
 2. Run the command "npm install" to download dependencies for the project. *Be warned* Puppeteer installs and runs on Chromium, an open-source browser project.
-3.  
+3. In the terminal, run the command "node .\index.js" to launch the program and have it open the url entered in the index.js file ([nike.com/](https://www.nike.com/w/mens-jordan-shoes-37eefznik1zy7ok)). Program will automatically collect the titles of all shoes listed in the category and return them in the terminal.
 
 ### Built With
 

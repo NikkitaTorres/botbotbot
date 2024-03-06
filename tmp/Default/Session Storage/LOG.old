@@ -1,6 +1,5 @@
-2024/03/06-11:35:03.768 2638 Reusing MANIFEST C:\Users\nikki\Desktop\Epicodus stuff\botbotbot\tmp\Default\Session Storage/MANIFEST-000001
-2024/03/06-11:35:03.769 2638 Recovering log #6
-2024/03/06-11:35:03.771 2638 Reusing old log C:\Users\nikki\Desktop\Epicodus stuff\botbotbot\tmp\Default\Session Storage/000006.log 
-2024/03/06-11:35:10.025 5498 Level-0 table #10: started
-2024/03/06-11:35:10.030 5498 Level-0 table #10: 23405 bytes OK
-2024/03/06-11:35:10.032 5498 Delete type=0 #6
+2024/03/06-12:20:50.958 5c5c Reusing MANIFEST C:\Users\nikki\Desktop\Epicodus stuff\botbotbot\tmp\Default\Session Storage/MANIFEST-000001
+2024/03/06-12:20:50.959 5c5c Recovering log #9
+2024/03/06-12:20:50.959 5c5c Level-0 table #12: started
+2024/03/06-12:20:50.964 5c5c Level-0 table #12: 22155 bytes OK
+2024/03/06-12:20:50.969 5c5c Delete type=0 #9
