@@ -13,7 +13,10 @@ This is a project created as a test for a future capstone project. Currently, th
 ### Built With
 
 * [Puppeteer](https://pptr.dev/)
-* 
+* Javascript
+* Node.js
+
+Followed along with this YouTube [tutorial](https://www.youtube.com/watch?v=URGkzNC-Nwo&list=PLuJJZ-W1NwdqgvE0D-1SMS7EpWIC5cKqu) by Michael Kitas for getting started with puppeteer.
 
 ### Known Issues/Bugs
 
