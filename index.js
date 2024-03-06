@@ -43,5 +43,4 @@ const puppeteer = require("puppeteer");
 
     console.log(title, price, img);
   }
-  //await browser.close();
 })();
