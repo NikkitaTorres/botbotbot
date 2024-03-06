@@ -2,13 +2,13 @@
 by [Nikkita Torres](nikkitatorres@yahoo.com).
 
 ### Description
-This is a project created as a test for a future capstone project.
+This is a project created as a test for a future capstone project. Currently, the project is able to open a headless browser (no UI), and takes a screenshot of the website it is directed to navigate to, currently "example.com".
 
 ### Setup/Installation Requirements
 
 ### Built With
 
-* Puppeteer
+* [Puppeteer](https://pptr.dev/)
 * 
 
 ### Known Issues/Bugs
