@@ -17,7 +17,7 @@ This is a project created as a test for a future capstone project. Currently, th
 
 ### Known Issues/Bugs
 
-Not currently pulling any information into the terminal.
+First result in terminal is displaying as "Null Null Null".
 ### License
 
 MIT License
