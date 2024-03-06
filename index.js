@@ -14,6 +14,9 @@ const puppeteer = require("puppeteer");
   const productsHandles = await page.$$(
     "div.s-main-slot.s-result-list.s-search-results.sg-row > .s-result-item"
   );
+  let i = 0;
+
+  let items = [];
 
   for (const producthandle of productsHandles) {
     let title = "Null";
@@ -42,5 +45,10 @@ const puppeteer = require("puppeteer");
     } catch (error) {}
 
     console.log(title, price, img);
+
+    if (title !== "Null") {
+      items.push({title, price, img})
+    }
   }
+  console.log(items)
 })();

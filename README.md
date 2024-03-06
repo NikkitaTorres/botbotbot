@@ -8,7 +8,7 @@ This is a project created as a test for a future capstone project. Currently, th
 
 1. Clone this project [here](https://github.com/NikkitaTorres/botbotbot.git)
 2. Run the command "npm install" to download dependencies for the project. *Be warned* Puppeteer installs and runs on Chromium, an open-source browser project.
-3. In the terminal, run the command "node .\index.js" to launch the program and have it open the url entered in the index.js file ([amazon.com])(https://www.amazon.com/s?rh=n%3A15391321011&fs=true&ref=lp_15391321011_sar). Program will automatically collect the titles, price and image URL's of all items listed in the electronics and return them in the terminal.
+3. In the terminal, run the command "node .\index.js" to launch the program and have it open the url entered in the index.js file ([amazon.com])(https://www.amazon.com/s?i=electronics&rh=n%3A15391321011&fs=true&page=2&qid=1709757775&ref=sr_pg_2). Program will automatically collect the titles, price and image URL's of all items listed in the electronics and return them in the terminal.
 
 ### Built With
 
