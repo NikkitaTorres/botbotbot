@@ -1,3 +1,4 @@
+const fs = require('fs');
 const puppeteer = require("puppeteer");
 
 (async () => {
@@ -10,11 +11,6 @@ const puppeteer = require("puppeteer");
   await page.goto(
     "https://www.amazon.com/s?k=server&i=alexa-skills&crid=3BU0YLNLVCJHN&sprefix=serv%2Calexa-skills%2C259&ref=nb_sb_noss_2"
   );
-
-
-  let i = 0;
-
-  let items = [];
 
   let isBtnDisabled = false;
   while (!isBtnDisable) {
@@ -53,7 +49,15 @@ const puppeteer = require("puppeteer");
       console.log(title, price, img);
 
       if (title !== "Null") {
-        items.push({ title, price, img })
+        items.push({ title, price, img });
+
+        fs.appendFile(
+          'results.csv',
+          `${title.replace(/,/g, ".")},${price},${img}\n`,
+          function (err) {
+            if (err) throw err;
+          }
+        );
       }
       await page.waitForSelector("span.s-pagination-item.s-pagination-next", { visible: true });
       const is_disabled = await page.$('span.s-pagination-item.s-pagination-next.s-pagination-disabled') !== null;
@@ -61,13 +65,12 @@ const puppeteer = require("puppeteer");
       isBtnDisabled = is_disabled
       if (!is_disabled) {
         await Promise.all([
-         page.click("span.s-pagination-item.s-pagination-next"),
-         page.waitForNavigation({ waitUntil: "networkidle2" }),
-      ]);
+          page.click("span.s-pagination-item.s-pagination-next"),
+          page.waitForNavigation({ waitUntil: "networkidle2" }),
+        ]);
       }
 
     }
   }
-  console.log(items);
-  console.log(items.length);
+  //await browser.close();
 })();
