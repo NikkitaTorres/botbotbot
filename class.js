@@ -7,9 +7,9 @@ const puppeteer = require('puppeteer');
     waitUntil: "load"
   });
 
-  const is_disabled = await page.$('.s-pagination-disabled') !== null;
+  const is_disabled = await page.$('span.s-pagination-item.s-pagination-next.s-pagination-disabled') !== null;
 
   console.log(is_disabled)
 
-  await browser.close();
+  //await browser.close();
 })();

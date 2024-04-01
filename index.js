@@ -8,47 +8,66 @@ const puppeteer = require("puppeteer");
   });
   const page = await browser.newPage();
   await page.goto(
-    "https://www.amazon.com/s?i=electronics&rh=n%3A15391321011&fs=true&page=2&qid=1709757775&ref=sr_pg_2"
+    "https://www.amazon.com/s?k=server&i=alexa-skills&crid=3BU0YLNLVCJHN&sprefix=serv%2Calexa-skills%2C259&ref=nb_sb_noss_2"
   );
 
-  const productsHandles = await page.$$(
-    "div.s-main-slot.s-result-list.s-search-results.sg-row > .s-result-item"
-  );
+
   let i = 0;
 
   let items = [];
 
-  for (const producthandle of productsHandles) {
-    let title = "Null";
-    let price = "Null";
-    let img = "Null";
+  let isBtnDisabled = false;
+  while (!isBtnDisable) {
+    await page.waitForSelector('[data-index="5"]');
+    const productsHandles = await page.$$(
+      "div.s-main-slot.s-result-list.s-search-results.sg-row > .s-result-item"
+    );
 
-    try {
-      title = await page.evaluate(
-        (el) => el.querySelector("h2 > a > span").textContent,
-        producthandle
-      );
-    } catch (error) {}
+    for (const producthandle of productsHandles) {
 
-    try {
-      price = await page.evaluate(
-        (el) => el.querySelector(".a-price > .a-offscreen").textContent,
-        producthandle
-      );
-    } catch (error) {}
+      let title = "Null";
+      let price = "Null";
+      let img = "Null";
 
-    try {
-      img = await page.evaluate(
-        (el) => el.querySelector(".s-image").getAttribute("src"),
-        producthandle
-      );
-    } catch (error) {}
+      try {
+        title = await page.evaluate(
+          (el) => el.querySelector("h2 > a > span").textContent,
+          producthandle
+        );
+      } catch (error) { }
 
-    console.log(title, price, img);
+      try {
+        price = await page.evaluate(
+          (el) => el.querySelector(".a-price > .a-offscreen").textContent,
+          producthandle
+        );
+      } catch (error) { }
 
-    if (title !== "Null") {
-      items.push({title, price, img})
+      try {
+        img = await page.evaluate(
+          (el) => el.querySelector(".s-image").getAttribute("src"),
+          producthandle
+        );
+      } catch (error) { }
+
+      console.log(title, price, img);
+
+      if (title !== "Null") {
+        items.push({ title, price, img })
+      }
+      await page.waitForSelector("span.s-pagination-item.s-pagination-next", { visible: true });
+      const is_disabled = await page.$('span.s-pagination-item.s-pagination-next.s-pagination-disabled') !== null;
+
+      isBtnDisabled = is_disabled
+      if (!is_disabled) {
+        await Promise.all([
+         page.click("span.s-pagination-item.s-pagination-next"),
+         page.waitForNavigation({ waitUntil: "networkidle2" }),
+      ]);
+      }
+
     }
   }
-  console.log(items)
+  console.log(items);
+  console.log(items.length);
 })();
